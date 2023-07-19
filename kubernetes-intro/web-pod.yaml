@@ -8,6 +8,13 @@ spec:
   containers:
   - image: androidraddik/nginx_static_app:1.2
     name: web
+    livenessProbe:
+      tcpSocket:
+        port: 8000
+    readinessProbe:
+      httpGet:
+        path: /index.html
+        port: 80
     volumeMounts:
     - name: app
       mountPath: /app
