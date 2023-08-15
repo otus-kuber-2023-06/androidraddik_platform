@@ -1,3 +1,4 @@
+```
 # install nginx-ingress
 helm repo add ingress-nginx https://kubernetes.github.io/ingress-nginx && \
 helm repo update && \
@@ -30,3 +31,4 @@ helm plugin install https://github.com/chartmuseum/helm-push
 helm registry login https://harbor.158.160.99.232.sslip.io/ -u admin -p Harbor12345
 helm push frontend-0.1.0.tgz oci://harbor.158.160.99.232.sslip.io//otus-kuber
 helm push hipster-shop-0.1.0.tgz oci://harbor.158.160.99.232.sslip.io//otus-kuber
+```
